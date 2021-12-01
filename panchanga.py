@@ -256,7 +256,9 @@ def karana(jd, place):
 
   # 2. Find karana at this JDN
   solar_long = solar_longitude(rise)
+  print(solar_long)
   lunar_long = lunar_longitude(rise)
+  print(lunar_long)
   moon_phase = (lunar_long - solar_long) % 360
   today = ceil(moon_phase / 6)
   degrees_left = today * 6 - moon_phase
